@@ -1,7 +1,5 @@
-# Default gallery setup for rgallery
+# Gallery of simple examples from broom package
 
-This is the default gallery setup suggested for the [rgallery](https://github.com/dgrtwo/rgallery) package. It is a variation on the [Skinny Bones Jekyll Theme](http://mmistakes.github.io/skinny-bones-jekyll/) by [Michael Rose](https://mademistakes.com/).
-
-See the [rgallery](https://github.com/dgrtwo/rgallery) package for installation and usage instructions.
+This is a gallery of simple examples for the [broom](https://github.com/dgrtwo/broom) package, built using [rgallery](https://github.com/dgrtwo/rgallery).
 
 [View it here!](http://dgrtwo.github.io/broom-gallery/)
