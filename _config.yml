@@ -1,7 +1,7 @@
 # Site wide configuration
 
-title: R Gallery
-description: The starting setup for an gallery built with the rgallery package.
+title: broom gallery
+description: Some simple examples of the broom R package.
 logo: # 120x120 px default image used for Twitter summary card
 teaser: # 400x250 px default teaser image used in image archive grid
 locale:
