@@ -1,11 +1,13 @@
 ---
 layout: archive
 permalink: /
-title: "Latest Posts"
+title: ""
 ---
 
 <div class="tiles">
-{% for post in site.posts %}
-	{% include post-grid.html %}
+{% for page in site.pages %}
+    {% if page.layout == 'example' %}
+    	{% include example-grid.html %}
+    {% endif %}
 {% endfor %}
 </div><!-- /.tiles -->
