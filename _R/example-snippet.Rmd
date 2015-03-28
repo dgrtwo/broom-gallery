@@ -4,7 +4,13 @@ author: "Your Name"
 layout: snippet
 ---
 
-Here's one snippet to get you started. Note that you can find this snippet in `_R/example-snippet.Rmd`. To build it, use the [rgallery](https://github.com/dgrtwo/rgallery) package, with the `build_gallery()` function.
+Here's one snippet to get you started.
+
+* To edit this snippet, open `_R/example-snippet.Rmd` (or add new snippets in that folder!).
+* To rebuild it, use the [rgallery](https://github.com/dgrtwo/rgallery) package, with the `build_gallery()` function.
+* To view the page, go to the command line and do:
+
+    jekyll serve --watch    
 
 These snippets work just like any [knitr](http://yihui.name/knitr/) page. You can perform operations:
 

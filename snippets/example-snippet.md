@@ -5,9 +5,15 @@ layout: snippet
 image: example-snippet/unnamed-chunk-2-1.png
 ---
 
-Here's one snippet to get you started. Note that you can find this snippet in `_R/example-snippet.Rmd`. To build it, use the [rgallery](https://github.com/dgrtwo/rgallery) package, with the `build_gallery()` function.
+Here's one snippet to get you started.
 
-These posts
+* To edit this snippet, open `_R/example-snippet.Rmd` (or add new snippets in that folder!).
+* To rebuild it, use the [rgallery](https://github.com/dgrtwo/rgallery) package, with the `build_gallery()` function.
+* To view the page, go to the command line and do:
+
+    jekyll serve --watch    
+
+These snippets work just like any [knitr](http://yihui.name/knitr/) page. You can perform operations:
 
 
 {% highlight r %}
@@ -26,6 +32,6 @@ summary(cars)
 ##  Max.   :25.0   Max.   :120.00
 {% endhighlight %}
 
-If you include a plot, it'll be used as the default on your page:
+And you can make a graph (which will pop up as a "teaser" on the main gallery page):
 
 ![center](/images/example-snippet/unnamed-chunk-2-1.png) 
