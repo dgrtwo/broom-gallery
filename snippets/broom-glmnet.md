@@ -82,4 +82,4 @@ ggplot(tidied_cv, aes(lambda, estimate)) + geom_line(color = "red") +
     geom_vline(xintercept = glance_cv$lambda.1se, lty = 2)
 {% endhighlight %}
 
-![center](/images/broom-glmnet/unnamed-chunk-1-1.png) 
+![center](/broom-gallery/images/broom-glmnet/unnamed-chunk-1-1.png) 

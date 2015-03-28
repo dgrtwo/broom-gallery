@@ -64,4 +64,4 @@ ggplot(td, aes(time, estimate)) + geom_line() +
     geom_ribbon(aes(ymin = conf.low, ymax = conf.high), alpha = .2)
 {% endhighlight %}
 
-![center](/images/broom-survival/unnamed-chunk-1-1.png) 
+![center](/broom-gallery/images/broom-survival/unnamed-chunk-1-1.png) 

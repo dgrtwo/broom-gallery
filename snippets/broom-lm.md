@@ -27,4 +27,4 @@ ggplot(td, aes(estimate, term, color = term)) +
     geom_vline()
 {% endhighlight %}
 
-![center](/images/broom-lm/coef_plot-1.png) 
+![center](/broom-gallery/images/broom-lm/coef_plot-1.png) 
