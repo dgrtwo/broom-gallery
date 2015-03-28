@@ -1,0 +1,26 @@
+---
+title: "Tidying survival curves"
+author: "David Robinson"
+layout: snippet
+category: broom
+---
+
+We could fit a model with the [survival](http://cran.r-project.org/web/packages/survival/index.html) package:
+
+```{r survival}
+library(survival)
+surv_fit <- survfit(coxph(Surv(time, status) ~ age + sex, lung))
+surv_fit
+```
+
+Tidying this object lets us create a survival curve with `ggplot2`:
+
+```{r}
+library(broom)
+td <- tidy(surv_fit)
+head(td)
+
+library(ggplot2)
+ggplot(td, aes(time, estimate)) + geom_line() +
+    geom_ribbon(aes(ymin = conf.low, ymax = conf.high), alpha = .2)
+```

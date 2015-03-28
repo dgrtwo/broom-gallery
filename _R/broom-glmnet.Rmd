@@ -1,0 +1,43 @@
+---
+title: "Tidying glmnet objects"
+author: "David Robinson"
+layout: snippet
+category: broom
+---
+
+Suppose we create a LASSO regression with the glmnet package:
+
+```{r glmnet}
+library(glmnet)
+set.seed(03-19-2015)
+
+# generate data with 5 real variables and 45 null, on 100 observations
+x <- matrix(rnorm(100 * 50), 100)
+beta <- c(rnorm(5, 0, 1), rep(0, 50 - 5))
+y <- c(t(beta) %*% t(x)) + rnorm(50, sd = 3)
+
+glmnet_fit <- cv.glmnet(x,y)
+```
+
+We can tidy it with broom:
+
+```{r glmnet_plot}
+library(broom)
+tidied_cv <- tidy(glmnet_fit)
+glance_cv <- glance(glmnet_fit)
+
+head(tidied_cv)
+head(glance_cv)
+```
+
+Why is this useful? Because we can plot it using ggplot2!
+
+```{r}
+library(ggplot2)
+
+ggplot(tidied_cv, aes(lambda, estimate)) + geom_line(color = "red") +
+    geom_ribbon(aes(ymin = conf.low, ymax = conf.high), alpha = .2) +
+    scale_x_log10() +
+    geom_vline(xintercept = glance_cv$lambda.min) +
+    geom_vline(xintercept = glance_cv$lambda.1se, lty = 2)
+```
